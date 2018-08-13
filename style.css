@@ -243,10 +243,9 @@ nav {
 }
 
 .device__scroll_button {
+  text-align: center;
   position: sticky;
   bottom: 0;
-  left: 50%;
-  right: 50%;
 }
 
 .scroll {
