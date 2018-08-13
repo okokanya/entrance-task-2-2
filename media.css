@@ -1,0 +1,194 @@
+@media screen and (max-width: 800px) {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  .scroll {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .popup {
+    flex-grow: 1;
+    padding: 0 20px;
+  }
+
+  .popup_buttons {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .device_header__temp {
+    display: none;
+  }
+
+  .popup_device {
+    padding: 16px;
+    width: 100%;
+    margin: auto;
+    align-items: left;
+    height: auto;
+  }
+
+  .device_set {
+    width: 222px;
+    height: 222px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile_header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px #f0f0f0 solid;
+    background: white;
+    z-index: 1;
+  }
+  header {
+    display: none;
+  }
+
+  .mobile_header__nav {
+    margin-left: auto;
+  }
+
+  .content__column {
+    padding: 0;
+  }
+
+  .content__column__info__all__hello {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .weather > div {
+    padding: 0 16px;
+  }
+
+  .popup_buttons__button {
+    margin-top: 18px;
+    width: 100%;
+    height: 60px;
+  }
+  .device_header__name {
+    font-size: 18px;
+  }
+  .device_header {
+    margin-bottom: 0;
+  }
+  .device__name {
+    padding: 0;
+  }
+  .h1 {
+    font-size: 28px;
+  }
+
+  .content {
+    display: block;
+    width: 100%;
+    margin: 80px 0 0 0;
+  }
+
+  .content__column__info {
+    display: block;
+  }
+
+  .content__column__info__devices {
+    overflow-x: scroll;
+    display: flex;
+  }
+
+  .device__scroll_button {
+    display: none;
+  }
+
+  .device_selected__bottom {
+    display: none;
+  }
+
+  .device_selected__mobile {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+  }
+
+
+  .bottom_content__info__devices {
+    margin-left: -24px;
+  }
+  .device_selected__filter__mobile {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-weight: Bold;
+    font-size: 13px;
+    color: #000000;
+    background: #ffd93e;
+    border-radius: 20px;
+    padding: 0 8px;
+  }
+  .content__options {
+    display: flex;
+  }
+
+  .flex_line {
+    /* height: 33%; */
+    display: contents;
+  }
+  .content__item {
+    margin: 8px;
+    width: 200px;
+    height: 100px;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .content__options {
+    margin-left: -8px;
+    overflow-x: scroll;
+    display: inline-flex;
+  }
+
+  .arrows {
+    display: none;
+  }
+
+  .device_set__scale1 {
+    transform: rotate(-90deg);
+  }
+
+  .device_set__scale__light__low,
+  .device_set__scale__light__high {
+    transform: rotate(90deg);
+  }
+
+  .device_selected {
+    display: inline-flex;
+  }
+.bottom {
+      margin-right: 8px;
+}
+  .bottom_nav {
+    display: none;
+  }
+
+  .content__column__info__devices {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+  }
+  .p_desktop {
+    display: none;
+  }
+}

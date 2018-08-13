@@ -1,0 +1,263 @@
+body,
+html {
+  /* height: 100%;
+  /* margin: 0; */
+  /* min-height: 100%; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+.h1 {
+  font-weight: Bold;
+  font-size: 36px;
+  color: #333333;
+  letter-spacing: 0;
+}
+.p, .p_desktop {
+  padding: 24px 0;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  padding: 0 32px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #f0f0f0 solid;
+}
+
+.content__column__info__all {
+  flex: 2;
+  font-size: 14px;
+}
+
+.content__column__info__all__hello {
+  padding: 24px 0 0 0;
+  font-size: 27px;
+  color: #333333;
+}
+
+a {
+  color: #858585;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header a:active {
+  color: black;
+}
+.mobile_header {
+  display: none;
+}
+nav {
+  display: flex;
+}
+
+.header__link {
+  padding: 0 16px;
+}
+
+.header__logo {
+  padding-right: 16px;
+}
+
+.content a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.end img {
+  padding: 0 6px;
+}
+
+.transform {
+  transform: rotate(180deg);
+}
+
+.transform_bottom {
+  padding: 8px;
+  transform: rotate(-90deg);
+}
+
+.content__column > .header {
+  display: flex;
+  padding: 16px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.arrows {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.content__column {
+  padding: 0 16px;
+  flex-basis: 50%;
+}
+
+.content {
+  padding: 16px 16px;
+  flex-grow: 1;
+  display: flex;
+}
+
+.content__column__info {
+  padding: 0 24px;
+  display: flex;
+  height: 300px;
+  border-radius: 20px;
+  background-image: url("img/bg@2x.png");
+  background-size: cover;
+}
+
+.content__column__info__devices {
+  position: relative;
+  flex: 1;
+  overflow-y: scroll;
+  min-width: 224px;
+}
+
+.weather {
+  display: flex;
+  height: auto;
+}
+
+.weather > div {
+  padding: 16px;
+}
+
+.home > h1,
+.outdoors > h1 {
+  margin: 8px 0;
+}
+
+.weather__home,
+.weather__outdoors {
+  margin: 0;
+  font-size: 14px;
+  color: #858585;
+}
+
+.device {
+  padding: 8px;
+  border-radius: 20px;
+  margin: 8px;
+  width: 200px;
+  min-width: 200px;
+  height: 100px;
+  vertical-align: top;
+  display: inline-block;
+  background-color: #f7f7f7;
+}
+
+.device__name {
+  font-weight: Bold;
+  padding: 8px;
+  font-size: 14px;
+  color: #333333;
+}
+.device__info {
+  padding: 8px;
+  font-size: 12px;
+  color: #858585;
+}
+
+.content__item {
+  font-weight: Bold;
+  font-size: 14px;
+  color: #333333;
+  flex-basis: 27%;
+  margin: 8px 16px 8px 0;
+  padding: 8px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+}
+
+.flex_line {
+  height: 33%;
+  display: flex;
+}
+
+.content__item:active {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+}
+
+.device_selected__bottom {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+}
+.device_selected__filter {
+  font-weight: Bold;
+  font-size: 13px;
+  color: #000000;
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 8px 14px;
+  margin: 4px;
+}
+
+.device_selected__filter:active {
+  background: #ffd93e;
+}
+
+.bottom_content__info__devices {
+  margin-left: -8px;
+
+  padding: 0 32px;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  align-content: flex-start;
+}
+
+.bottom {
+  width: 200px;
+  margin-right: 32px;
+}
+
+.bottom_nav {
+  padding: 24px 32px;
+  display: flex;
+  font-size: 12px;
+  color: #858585;
+  letter-spacing: 0.01px;
+  text-align: left;
+}
+
+.bottom_nav__a {
+  margin-right: 24px;
+}
+
+.device__scroll_button {
+  position: sticky;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+}
+
+.scroll {
+  overflow-x: scroll;
+}
+
+.device_selected__mobile {
+  display: none;
+}
+
+.transform90 {
+  display: none;
+}
+
