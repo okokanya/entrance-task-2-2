@@ -18,7 +18,8 @@ body {
   color: #333333;
   letter-spacing: 0;
 }
-.p, .p_desktop {
+.p,
+.p_desktop {
   padding: 24px 0;
   font-size: 16px;
   font-weight: bold;
@@ -251,17 +252,12 @@ nav {
   bottom: 0;
 }
 
-
 .scroll {
   overflow-x: scroll;
-  /* width: 100%; */
-
-
-    display: flex;
-    width: 100%;
-    height: auto;
-    align-items: center;
-
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
 }
 
 .device_selected__mobile {

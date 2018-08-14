@@ -88,8 +88,8 @@ function OpenFloor() {
 
 
 if (ye) yex = yex + ye;
-if (yex > 360) yex = 360;
-if (yex < 0) yex = 0;
+if (yex > 330) yex = 330;
+if (yex < 30) yex = 30;
 
 
     if (yex > 180) {
