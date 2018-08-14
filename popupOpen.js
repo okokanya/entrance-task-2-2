@@ -19,39 +19,36 @@ degree_button.addEventListener("click", OpenDegree);
 
 function OpenLED() {
   const handle = document.getElementById("light_handle");
-const line = document.getElementById("line_light");
-let width = line.offsetWidth;
-console.log(width);
+  const line = document.getElementById("line_light");
+  let width = line.offsetWidth;
+  console.log(width);
 
-if (line.addEventListener) {
-  if ("onwheel" in document) {
-    line.addEventListener("wheel", onWheel);
-  } else if ("onmousewheel" in document) {
-    line.addEventListener("mousewheel", onWheel);
+  if (line.addEventListener) {
+    if ("onwheel" in document) {
+      line.addEventListener("wheel", onWheel);
+    } else if ("onmousewheel" in document) {
+      line.addEventListener("mousewheel", onWheel);
+    } else {
+      line.addEventListener("MozMousePixelScroll", onWheel);
+    }
   } else {
-    line.addEventListener("MozMousePixelScroll", onWheel);
-  }
-} else {
-  line.attachEvent("onmousewheel", onWheel);
-}
-
-let YeX = 0;
-let block = `${width}` / 2;
-function onWheel(e) {
-  e = e || window.event;
-  let Ye = e.deltaY;
-  YeX = YeX + Ye;
-  if (YeX >= `${block}`) {
-    YeX = `${block}`;
-  } else if (YeX <= -(`${block}`)) {
-    YeX = -`${block}`;
+    line.attachEvent("onmousewheel", onWheel);
   }
 
-  handle.style.transform = `translateX(${YeX}px)`;
-}
-
-onWheel();
-
+  let YeX = 0;
+  let block = `${width}` / 2;
+  function onWheel(e) {
+    e = e || window.event;
+    let Ye = e.deltaY;
+    YeX = YeX + Ye;
+    if (YeX >= `${block}`) {
+      YeX = `${block}`;
+    } else if (YeX <= -`${block}`) {
+      YeX = -`${block}`;
+    }
+    handle.style.transform = `translateX(${YeX}px)`;
+  }
+  onWheel();
 
   led.classList.remove("hide");
   blurLayer.classList.add("blur--enabled");
@@ -93,7 +90,6 @@ function Close() {
 // let block = `${width}` / 2;
 
 // console.log(width)
-
 
 // function onWheel(e) {
 //   // e.preventDefault();
