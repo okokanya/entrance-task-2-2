@@ -58,8 +58,10 @@ function OpenLED() {
 function OpenFloor() {
   floor.classList.remove("hide");
 
-  const rotate_1 = document.getElementById("rotate_1");
   const scale = document.getElementById("scale");
+  const rotate_1 = document.getElementById("rotate_1");
+  const rotate_2 = document.getElementById("rotate_2");
+
 
 
   if (scale.addEventListener) {
@@ -84,6 +86,8 @@ function OpenFloor() {
     console.log(yex);
 
     rotate_1.style.transform = `rotate(${yex}deg)`;
+    rotate_2.style.transform = `rotate(${Math.max(180, yex)})`;
+
   }
   onWheel();
 
