@@ -52,10 +52,22 @@ if (line.addEventListener) {
   line.attachEvent("onmousewheel", onWheel);
 }
 
+
+let YeX = 0;
+
 function onWheel(e) {
+  e.preventDefault();
   e = e || window.event;
   let Ye = e.deltaY;
   console.log(Ye);
+  YeX = YeX + Ye;
+  if (YeX >= 280) {
+    YeX = 280;
+  } else if (YeX <= -280) {
+    YeX = -280;
+  };
 
-  handle.style.transform = `translateX(${Ye}px)`;
+
+
+  handle.style.transform = `translateX(${YeX}px)`;
 }
