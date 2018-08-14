@@ -153,7 +153,7 @@
 }
 
 .device_set__scale__light__scale {
-  transform: translateX(50px);
+  /* transform: translateX(); */
   cursor: pointer;
   height: 60px;
   width: 60px;

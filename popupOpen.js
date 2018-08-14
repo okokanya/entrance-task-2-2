@@ -1,5 +1,5 @@
-const close = document.querySelectorAll('.close');
-const blurLayer = document.querySelector('.blur');
+const close = document.querySelectorAll(".close");
+const blurLayer = document.querySelector(".blur");
 
 for (let i = 0; i < close.length; i++) {
   close[i].addEventListener("click", Close);
@@ -19,20 +19,43 @@ degree_button.addEventListener("click", OpenDegree);
 
 function OpenLED() {
   led.classList.remove("hide");
-  blurLayer.classList.add('blur--enabled');
+  blurLayer.classList.add("blur--enabled");
 }
 function OpenFloor() {
   floor.classList.remove("hide");
-  blurLayer.classList.add('blur--enabled');
+  blurLayer.classList.add("blur--enabled");
 }
 function OpenDegree() {
   degree.classList.remove("hide");
-  blurLayer.classList.add('blur--enabled');
+  blurLayer.classList.add("blur--enabled");
 }
 
 function Close() {
   degree.classList.add("hide");
   floor.classList.add("hide");
   led.classList.add("hide");
-  blurLayer.classList.remove('blur--enabled');
+  blurLayer.classList.remove("blur--enabled");
+}
+
+const handle = document.getElementById("light_handle");
+const line = document.getElementById("line_light");
+
+if (line.addEventListener) {
+  if ("onwheel" in document) {
+    line.addEventListener("wheel", onWheel);
+  } else if ("onmousewheel" in document) {
+    line.addEventListener("mousewheel", onWheel);
+  } else {
+    line.addEventListener("MozMousePixelScroll", onWheel);
+  }
+} else {
+  line.attachEvent("onmousewheel", onWheel);
+}
+
+function onWheel(e) {
+  e = e || window.event;
+  let Ye = e.deltaY;
+  console.log(Ye);
+
+  handle.style.transform = `translateX(${Ye}px)`;
 }
