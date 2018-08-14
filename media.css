@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     border-bottom: 1px #f0f0f0 solid;
@@ -124,7 +124,6 @@
     align-content: flex-start;
   }
 
-
   .bottom_content__info__devices {
     margin-left: -24px;
   }
@@ -139,9 +138,7 @@
     border-radius: 20px;
     padding: 0 8px;
   }
-  .content__options {
-    display: flex;
-  }
+
 
   .flex_line {
     /* height: 33%; */
@@ -157,7 +154,7 @@
 
   .content__options {
     margin-left: -8px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     display: inline-flex;
   }
 
@@ -177,9 +174,9 @@
   .device_selected {
     display: inline-flex;
   }
-.bottom {
-      margin-right: 8px;
-}
+  .bottom {
+    margin-right: 8px;
+  }
   .bottom_nav {
     display: none;
   }

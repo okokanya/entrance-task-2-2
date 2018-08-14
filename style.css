@@ -160,6 +160,7 @@ nav {
   vertical-align: top;
   display: inline-block;
   background-color: #f7f7f7;
+  cursor: pointer;
 }
 
 .device__name {
@@ -250,6 +251,14 @@ nav {
 
 .scroll {
   overflow-x: scroll;
+  /* width: 100%; */
+
+
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
 }
 
 .device_selected__mobile {
@@ -260,3 +269,6 @@ nav {
   display: none;
 }
 
+.device_selected {
+  display: inline-flex;
+}
