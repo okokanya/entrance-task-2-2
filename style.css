@@ -245,16 +245,12 @@ nav {
 
 .device__scroll_button {
   text-align: center;
-  position: absolute;
-  top: 0;
+  position: sticky;
   left: 0;
   right: 0;
-  /* display: flex; */
   bottom: 0;
 }
-.device__scroll_button:hover{
-  display: none;
-}
+
 
 .scroll {
   overflow-x: scroll;
