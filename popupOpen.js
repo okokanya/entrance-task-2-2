@@ -61,6 +61,8 @@ function OpenFloor() {
   const scale = document.getElementById("scale");
   const rotate_1 = document.getElementById("rotate_1");
   const rotate_2 = document.getElementById("rotate_2");
+  const rotate_3 = document.getElementById("rotate_3");
+
 
 
 
@@ -82,11 +84,16 @@ function OpenFloor() {
     let ye = Number(e.deltaY);
     console.log(ye);
     if (ye) yex = yex + ye;
-    // yex = yex + ye;
     console.log(yex);
 
+    if (yex > 180) {
+      rotate_3.style.display = `none`;
+    } if ( yex < 181) {
+        rotate_3.style.display = `block`;
+    }
+    // 4. если x > 180 делай серому display: none, если x < 181, делай серому display: block;
     rotate_1.style.transform = `rotate(${yex}deg)`;
-    rotate_2.style.transform = `rotate(${Math.max(180, yex)})`;
+    rotate_2.style.transform = `rotate(${Math.min(180, yex)}deg)`;
 
   }
   onWheel();
