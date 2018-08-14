@@ -280,3 +280,6 @@ nav {
   display: inline-flex;
 }
 
+.device_set__scale > img {
+  border-radius: 50%;
+}
