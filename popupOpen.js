@@ -18,10 +18,13 @@ floor_button.addEventListener("click", OpenFloor);
 degree_button.addEventListener("click", OpenDegree);
 
 function OpenLED() {
+  led.classList.remove("hide");
+
+
   const handle = document.getElementById("light_handle");
   const line = document.getElementById("line_light");
   let width = line.offsetWidth;
-  console.log(width);
+  let block = (width / 2) - 32;
 
   if (line.addEventListener) {
     if ("onwheel" in document) {
@@ -35,22 +38,24 @@ function OpenLED() {
     line.attachEvent("onmousewheel", onWheel);
   }
 
-  let YeX = 0;
-  let block = `${width}` / 2;
+  let yex = 0;
   function onWheel(e) {
+    // console.log(yex);
     e = e || window.event;
-    let Ye = e.deltaY;
-    YeX = YeX + Ye;
-    if (YeX >= `${block}`) {
-      YeX = `${block}`;
-    } else if (YeX <= -`${block}`) {
-      YeX = -`${block}`;
+    let ye = Number(e.deltaY);
+    console.log(ye);
+    if (ye) yex = yex + ye;
+    if ( yex >= block) {
+      yex = block;
+    } else if (yex <= -block) {
+      yex = -block;
     }
-    handle.style.transform = `translateX(${YeX}px)`;
+    console.log(yex);
+    handle.style.transform = `translateX(${yex}px)`;
   }
   onWheel();
 
-  led.classList.remove("hide");
+
   blurLayer.classList.add("blur--enabled");
 }
 function OpenFloor() {
