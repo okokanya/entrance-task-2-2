@@ -85,7 +85,7 @@ nav {
 }
 
 .transform_bottom {
-  padding: 8px;
+  padding: 0 8px;
   transform: rotate(-90deg);
 }
 
