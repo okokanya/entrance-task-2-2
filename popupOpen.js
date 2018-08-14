@@ -86,13 +86,20 @@ function OpenFloor() {
     if (ye) yex = yex + ye;
     console.log(yex);
 
+
+if (ye) yex = yex + ye;
+if (yex > 360) yex = 360;
+if (yex < 0) yex = 0;
+
+
     if (yex > 180) {
       rotate_3.style.display = `none`;
-    } if ( yex < 181) {
+    } if ( yex < 181 ) {
         rotate_3.style.display = `block`;
     }
-    // 4. если x > 180 делай серому display: none, если x < 181, делай серому display: block;
     rotate_1.style.transform = `rotate(${yex}deg)`;
+    rotate_4.style.transform = `rotate(${yex-30}deg)`;
+
     rotate_2.style.transform = `rotate(${Math.min(180, yex)}deg)`;
 
   }
