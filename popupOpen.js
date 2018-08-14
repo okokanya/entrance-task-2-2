@@ -54,11 +54,41 @@ function OpenLED() {
 
   blurLayer.classList.add("blur--enabled");
 }
+
 function OpenFloor() {
   floor.classList.remove("hide");
+
+  const rotate_1 = document.getElementById("rotate_1");
+  const scale = document.getElementById("scale");
+
+
+  if (scale.addEventListener) {
+    if ("onwheel" in document) {
+      scale.addEventListener("wheel", onWheel);
+    } else if ("onmousewheel" in document) {
+      scale.addEventListener("mousewheel", onWheel);
+    } else {
+      scale.addEventListener("MozMousePixelScroll", onWheel);
+    }
+  } else {
+    scale.attachEvent("onmousewheel", onWheel);
+  }
+
+  let yex = 0;
+  function onWheel(e) {
+    e = e || window.event;
+    let ye = Number(e.deltaY);
+    console.log(ye);
+    if (ye) yex = yex + ye;
+    // yex = yex + ye;
+    console.log(yex);
+
+    rotate_1.style.transform = `rotate(${yex}deg)`;
+  }
+  onWheel();
+
   blurLayer.classList.add("blur--enabled");
 }
-
 
 function OpenDegree() {
   degree.classList.remove("hide");
@@ -94,7 +124,6 @@ function OpenDegree() {
     handle.style.transform = `translateX(${yex}px)`;
   }
   onWheel();
-
 
   blurLayer.classList.add("blur--enabled");
 }

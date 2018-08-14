@@ -245,8 +245,15 @@ nav {
 
 .device__scroll_button {
   text-align: center;
-  position: sticky;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* display: flex; */
   bottom: 0;
+}
+.device__scroll_button:hover{
+  display: none;
 }
 
 .scroll {
@@ -271,4 +278,19 @@ nav {
 
 .device_selected {
   display: inline-flex;
+}
+
+.transform1 {
+  /* transform: rotate(180deg); */
+
+}
+
+.transform2 {
+  transform: rotate(180deg);
+
+}
+
+.transform3 {
+  transform: rotate(180deg);
+
 }
