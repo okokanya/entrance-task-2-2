@@ -59,12 +59,11 @@ function OpenFloor() {
   floor.classList.remove("hide");
 
   const scale = document.getElementById("scale");
-  const rotate_1 = document.getElementById("rotate_1");
-  const rotate_2 = document.getElementById("rotate_2");
-  const rotate_3 = document.getElementById("rotate_3");
+  const rotate1 = document.getElementById("rotate_1");
+  const rotate2 = document.getElementById("rotate_2");
+  const rotate3 = document.getElementById("rotate_3");
 
-
-
+  const rotate4 = document.getElementById("rotate_4");
 
   if (scale.addEventListener) {
     if ("onwheel" in document) {
@@ -86,22 +85,19 @@ function OpenFloor() {
     if (ye) yex = yex + ye;
     console.log(yex);
 
-
-if (ye) yex = yex + ye;
-if (yex > 330) yex = 330;
-if (yex < 30) yex = 30;
-
+    if (ye) yex = yex + ye;
+    if (yex > 330) yex = 330;
+    if (yex < 30) yex = 30;
 
     if (yex > 180) {
-      rotate_3.style.display = `none`;
-    } if ( yex < 181 ) {
-        rotate_3.style.display = `block`;
+      rotate3.style.display = `none`;
     }
-    rotate_1.style.transform = `rotate(${yex}deg)`;
-    rotate_4.style.transform = `rotate(${yex-30}deg)`;
-
-    rotate_2.style.transform = `rotate(${Math.min(180, yex)}deg)`;
-
+    if (yex < 181) {
+      rotate3.style.display = `block`;
+    }
+    rotate1.style.transform = `rotate(${yex}deg)`;
+    rotate4.style.transform = `rotate(${yex - 30}deg)`;
+    rotate2.style.transform = `rotate(${Math.min(180, yex)}deg)`;
   }
   onWheel();
 
